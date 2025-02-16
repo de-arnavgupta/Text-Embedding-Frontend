@@ -20,8 +20,8 @@ function App() {
                 `http://localhost:8080/embed?message=${encodeURIComponent(message)}`
             );
             setEmbedding(response.data.embedding);
-        }catch (err) {
-            setError(`Failed to fetch embedding: ${err.message}`);
+        } catch (err) {
+            setError("Failed to fetch embedding. Check if the backend is running.");
         } finally {
             setLoading(false);
         }
